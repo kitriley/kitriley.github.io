@@ -1,0 +1,217 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,500&family=Roboto&family=Roboto+Mono&display=swap');
+
+/*main styles */
+
+body {
+  background-color: #302617;
+}
+
+/*heading and main sections on index page are offset on larger screens*/
+header {
+  height: 10rem;
+  margin-left: 25%;
+  margin-top: 4%;
+  margin-right: 50%;
+  width: 25%;
+}
+
+main {
+  margin-left: 50%;
+  margin-right: 25%;
+  width: 25%;
+}
+
+/*heading and main sections on project pages are always stacked*/
+.project {
+  margin-left: 25%;
+  width: 50%;
+}
+
+footer {
+  margin-left: 25%;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+footer p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px;
+}
+
+h1 {
+  color: #5fbbb2;
+  font-family: "Poppins", sans-serif;
+  font-weight: semi-bold;
+  font-size: 48px;
+}
+
+h2 {
+  color: #a4c2f4;
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+}
+
+p {
+  color: #f5e1ea;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin: 0.5rem 0rem;
+}
+
+a {
+  text-decoration: none;
+  color: #5fbbb2;
+}
+
+.item a:hover {
+  text-decoration: underline;
+}
+
+#bio p {
+  font-size: 28px;
+}
+
+/* Style the menu text that is used to open and close the collapsible content */
+.collapsible {
+  color: #a4c2f4;
+  background-color: inherit;
+  padding-left: 0rem;
+  padding-top: 2rem;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: "Poppins" sans-serif;
+  font-size: 28px;
+}
+
+/* make menu text bold if hovered over/clicked on */
+.active,.collapsible:hover {
+  font-weight: bold;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  display: none;
+  padding-left: 0rem;
+  overflow: hidden;
+} 
+.item {
+  padding-top: 1rem;
+}
+
+
+
+/*styles for project pages with one column*/
+/*also styles for columns nested within double column flex boxes*/
+.project-single-col {
+    width: 100%;
+    margin-left: 0rem;
+    margin-top: 4rem;
+}
+
+.project-single-col img {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+/*flexbox layout for double column project content*/
+.project-double-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  align-content: space-between;
+  width: 100%;
+}
+
+.col-content {
+  width: 92%;
+  padding-right: 4%;
+}
+
+
+/*adjustments for different screen sizes*/
+
+@media only screen and (max-width: 1400px) {
+    /*header and main sections are stacked on small screens*/
+    header {
+    height: 10rem;
+    margin-left: 25%;
+    margin-top: 4%;
+    margin-right: 25%;
+    width: 50%;
+    }
+  
+    main {
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 50%;
+    }
+/*no double columns for small screens*/
+    .project-double-col{
+        flex-direction: column;
+        align-items: center;
+    }
+      
+    .col-content {
+        width: 100%;
+    }
+  
+    footer {
+      margin-left: 25%;
+      margin-bottom: 2rem;
+      margin-top: 4rem;
+    }
+  }
+
+@media only screen and (max-width: 1000px) {
+  /*smaller outside margins on smaller screens*/
+  header {
+  height: 10rem;
+  margin-left: 10%;
+  margin-top: 4%;
+  margin-right: 10%;
+  width: 80%;
+  }
+
+  main,main.project {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+
+  footer {
+    margin-left: 10%;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    /*smaller outside margins on smallest screens*/
+    header {
+    height: 10rem;
+    margin-left: 5%;
+    margin-top: 4%;
+    margin-right: 5%;
+    width: 90%;
+    }
+  
+    main,main.project {
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 90%;
+    }
+
+    footer {
+      margin-left: 5%;
+      margin-bottom: 2rem;
+      margin-top: 4rem;
+    }
+  }
+  
