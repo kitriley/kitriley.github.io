@@ -42,8 +42,12 @@ footer p {
 h1 {
   color: #5fbbb2;
   font-family: "Poppins", sans-serif;
-  font-weight: semi-bold;
+  font-weight: normal;
   font-size: 48px;
+}
+
+h1:hover {
+  font-style: italic;
 }
 
 h2 {
@@ -90,6 +94,7 @@ a {
 /* make menu text bold if hovered over/clicked on */
 .active,.collapsible:hover {
   font-weight: bold;
+  font-style: italic;
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -97,7 +102,7 @@ a {
   display: none;
   padding-left: 0rem;
   overflow: hidden;
-} 
+}
 .item {
   padding-top: 1rem;
 }
@@ -146,7 +151,7 @@ a {
     margin-right: 25%;
     width: 50%;
     }
-  
+
     main {
       margin-left: 25%;
       margin-right: 25%;
@@ -157,11 +162,11 @@ a {
         flex-direction: column;
         align-items: center;
     }
-      
+
     .col-content {
         width: 100%;
     }
-  
+
     footer {
       margin-left: 25%;
       margin-bottom: 2rem;
@@ -201,7 +206,7 @@ a {
     margin-right: 5%;
     width: 90%;
     }
-  
+
     main,main.project {
       margin-left: 5%;
       margin-right: 5%;
@@ -214,4 +219,3 @@ a {
       margin-top: 4rem;
     }
   }
-  
